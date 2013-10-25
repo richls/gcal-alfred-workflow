@@ -19,7 +19,10 @@ the directions under [Date Formats](#date-formats) below.
     > `date -1` or `date -1d` will show you yesterday, and `date +2m` will show you two months from today. 
 
 ##Date Formats
-By default, the current code is set to use US-style dates, in the format "MM/DD/YY".  
+By default, the current extension uses US-style dates, in the format "MM/DD/YY".  
 
-You can change it to use "DD/MM/YY" by changing the `$date_format="US";` line to `$date_format="UK";` 
-(or any other value), and you can use a different separator character by changing `$date_sep="/";` to suit your fancy.
+You can change it to put the day first (DD/MM/YY) by double-clicking on the script filter in the Alfred workflow pane, and changing the 5th line from `$date_format="US";` to `$date_format="UK";` (or any other value).   
+
+You can use a different separator character by changing the 6th line `$date_sep="/";` to suit your fancy. Note that
+if you use '-' as the date separator, you will need to put a space between the date and the calculation when you are using the date navigation feature.  For example, `date 12-25 -13` calculates 13 days before Dec. 25 this year, whereas `date 12-25-13` is Dec. 25, 2013.
+
